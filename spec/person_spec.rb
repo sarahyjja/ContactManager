@@ -1,41 +1,27 @@
 require 'person'
-# #!/usr/bin/ruby
-# #require 'rubygems'
-# require 'json'
-# require 'pp'
-#
-# json = File.read('input.json')
-# obj = JSON.parse(json)
-#
-# pp obj
 
 RSpec.describe Person do
+  it 'ask for a first name' do
+    user = Person.new("Sarah", "Kharraz", "s@k.com", 123456789)
 
-  it '1 - give the first name of the user' do
-    user = Person.new()
-    user.get_first_name
-
-    expect(user.first_name).to eq("sarah")
+    expect(user.first_name).to eq("Sarah")
   end
 
-  it '2 - give the last name and verify if it s a string' do
-    user = Person.new()
-    user.get_last_name
+  it 'ask for a last name' do
+    user = Person.new("Sarah", "Kharraz", "s@k.com", 123456789)
 
-    expect(user.last_name.is_a?String).to eq(true)
+    expect(user.last_name).to eq("Kharraz")
   end
 
-  it '3 - ask for a number' do
-    user = Person.new()
-    user.get_phone_number
+  it 'ask for a phone' do
+    user = Person.new("Sarah", "Kharraz", "s@k.com", 123456789)
 
-    expect(user.phone_number.is_a?Integer).to eq(true)
+    expect(user.phone_number).to eq(123456789)
   end
 
-  # xit '4 - give the last name of the user asking with get.chomp without expecting it' do
-  #   user = Person.new()
-  #   user.get_last_name
-  #
-  #   expect(user.last_name).to eq(:last_name = (""))
-  # end
+  it 'ask for a email' do
+    user = Person.new("Sarah", "Kharraz", "s@k.com", 123456789)
+
+    expect(user.email_address).to eq("s@k.com")
+  end
 end
