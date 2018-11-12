@@ -1,13 +1,11 @@
 require 'addressbook'
 
 RSpec.describe AddressBook do
+  it 'adds a person' do
+    address_book = AddressBook.new()
 
-  it 'adds a contact to the list' do
-    contact = Person.new('Sarah', 'Kara', '00447123456789', 'my@email.com')
-    addressbook = AddressBook.new
+    address_book.add_person("First Name", "Last Name", "email@email.com", 12345)
 
-    addressbook.add(contact)
-
-    expect(addressbook.list).to eq([contact])
+    expect(address_book.get_people).to eq([Person.new("First Name", "Last Name", "email@email.com", 12345)])
   end
 end
