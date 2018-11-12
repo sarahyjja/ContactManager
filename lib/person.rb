@@ -1,6 +1,6 @@
 class Person
 
-  attr_accessor :first_name, :last_name
+  attr_accessor :first_name, :last_name, :phone_number, :email_address
 
   def initalize(first_name="", last_name="", email_address="", phone_number="")
     @first_name = first_name
@@ -8,13 +8,6 @@ class Person
     @email_address = email_address
     @phone_number = phone_number
   end
-
-  # def get_info
-  #   get_first_name
-  #   get_last_name
-  #   get_email_address
-  #   get_phone_number
-  # end
 
   def get_first_name
     puts "What is the first name?:"
@@ -35,7 +28,7 @@ class Person
 
   def get_phone_number
     puts "What is the phone_number:"
-    @phone_number = gets.chomp
+    @phone_number = gets.to_i
   end
 
 
