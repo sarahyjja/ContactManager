@@ -1,13 +1,13 @@
 require 'person'
-#!/usr/bin/ruby
-require 'rubygems'
-require 'json'
-require 'pp'
-
-json = File.read('input.json')
-obj = JSON.parse(json)
-
-pp obj
+# #!/usr/bin/ruby
+# #require 'rubygems'
+# require 'json'
+# require 'pp'
+#
+# json = File.read('input.json')
+# obj = JSON.parse(json)
+#
+# pp obj
 
 RSpec.describe Person do
 
@@ -18,7 +18,7 @@ RSpec.describe Person do
     expect(user.first_name).to eq("sarah")
   end
 
-  xit '2 - give the last name and verify if it s a string' do
+  it '2 - give the last name and verify if it s a string' do
     user = Person.new()
     user.get_last_name
 
@@ -32,10 +32,10 @@ RSpec.describe Person do
     expect(user.phone_number.is_a?Integer).to eq(true)
   end
 
-  xit '4 - give the last name of the user asking with get.chomp without expecting it' do
-    user = Person.new()
-    user.get_last_name
-
-    expect(user.last_name).to eq(:last_name = (""))
-  end
+  # xit '4 - give the last name of the user asking with get.chomp without expecting it' do
+  #   user = Person.new()
+  #   user.get_last_name
+  #
+  #   expect(user.last_name).to eq(:last_name = (""))
+  # end
 end

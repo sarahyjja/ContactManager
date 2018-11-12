@@ -28,8 +28,6 @@ class Person
 
   def get_phone_number
     puts "What is the phone_number:"
-    @phone_number = gets.to_i
+    @phone_number = gets.chomp
   end
-
-
 end
