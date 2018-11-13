@@ -4,25 +4,16 @@
 #     2 - print the value
 # We will also create the command here to range them by alphabetic order.
 
-#require 'person'
+# require 'person'
 
 class AddressBook
-  @addressbook = []
+#  @addressbook = []
 
-  def initialize(add_person)
-    @addressbook = addressbook
-  end
-  def get_value_first_name
-    @first_name
-  end
-  def get_value_last_name
-    @first_name
-  end
-  def get_value_phone
-    @first_name
-  end
-  def get_value_email
-    @first_name
+def initialize(first_name)
+  @first_name = first_name
+end
+  def list_first_name
+    @first_name = ["sarah", "marie", "jon"]
   end
 
 end

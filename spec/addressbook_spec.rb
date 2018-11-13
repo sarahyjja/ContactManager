@@ -2,22 +2,18 @@ require 'addressbook'
 
 RSpec.describe AddressBook do
 
-  it 'add new person' do
+  it 'give the value of every first name' do
     addressbook = AddressBook.new()
 
-    add_person = Person.new()
-    addressbook.add_person("New User")
-
-    expect(addressbook.initialize).to eq("New User")
+    expect(addressbook.list_first_name).to eq(["sarah", "marie", "jon"])
   end
 
-  xit 'get the value first name' do
-    addressbook = AddressBook.new()
-
-    addressbook.add_person("First Name", "Last Name", "email@email.com", 12345)
-    add_person = Person.new("First Name")
-
-    expect(addressbook.get_value_first_name).to eq("First Name")
-#   expect(addressbook.get_value_first_name).to eq([Person.new("First Name", "Last Name", "email@email.com", 12345)])
-  end
+  # xit 'add new person' do
+  #   addressbook = AddressBook.new()
+  #
+  #   # add_person = Person.new()
+  #   addressbook.add_person("Sarah", "K", "a@b.com", 12345)
+  #
+  #   expect(addressbook.names).to eq(["Sarah"])
+  # end
 end

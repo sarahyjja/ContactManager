@@ -9,9 +9,9 @@
 #    B] Command to store happen here :
 #            1 - call the addressbook file
 #            2 - ask to save the new person in the addressbook bucket
- 
 
-require 'application'
+
+#require 'application'
 
 class Application
   @address_book = get_person
